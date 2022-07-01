@@ -1,0 +1,101 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'main'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=main",
+          "--package=abc-work"
+        ],
+        "filter": {
+          "name": "main",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'main'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=main",
+          "--package=abc-work"
+        ],
+        "filter": {
+          "name": "main",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug executable 'main_template'",
+      "cargo": {
+        "args": [
+          "build",
+          "--bin=main_template",
+          "--package=abc-work"
+        ],
+        "filter": {
+          "name": "main_template",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug unit tests in executable 'main_template'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--bin=main_template",
+          "--package=abc-work"
+        ],
+        "filter": {
+          "name": "main_template",
+          "kind": "bin"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    },
+    {
+      "type": "lldb",
+      "request": "launch",
+      "name": "Debug integration test 'test_template'",
+      "cargo": {
+        "args": [
+          "test",
+          "--no-run",
+          "--test=test_template",
+          "--package=abc-work"
+        ],
+        "filter": {
+          "name": "test_template",
+          "kind": "test"
+        }
+      },
+      "args": [],
+      "cwd": "${workspaceFolder}"
+    }
+  ]
+}
